@@ -1,6 +1,7 @@
 package exercise.springex1;
 
 import exercise.springex1.repository.JdbcMemberRepository;
+import exercise.springex1.repository.JdbcTemplateMemberRepository;
 import exercise.springex1.repository.MemberRepository;
 import exercise.springex1.repository.MemoryMemberRepository;
 import exercise.springex1.service.MemberService;
@@ -28,6 +29,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
