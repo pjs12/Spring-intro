@@ -5,11 +5,13 @@ import exercise.springex1.repository.MemberRepository;
 import exercise.springex1.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //@Service
+@Transactional      // data를 저장하거나 변경할 때 항상 필요
 public class MemberService {
     private final MemberRepository memberRepository;
 
