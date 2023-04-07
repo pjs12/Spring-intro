@@ -1,5 +1,6 @@
 package exercise.springex1;
 
+import exercise.springex1.aop.TimeTraceAop;
 import exercise.springex1.repository.*;
 import exercise.springex1.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,11 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+//    @Bean
+//    public TimeTraceAop TimeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 
 //    @Bean
 //    public MemberRepository memberRepository() {
